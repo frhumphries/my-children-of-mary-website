@@ -9,13 +9,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
         
-        :root {
-            --marian-blue: #1e3a5f;
-        }
-        
-        .marian-blue { color: #1e3a5f; }
-        .bg-marian-blue { background-color: #1e3a5f; }
-        
         .heading-serif {
             font-family: 'Playfair Display', Georgia, serif;
         }
@@ -35,10 +28,6 @@
             line-height: 2.5rem;
         }
         
-        .marian-border {
-            border-color: #1e3a5f;
-        }
-        
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -52,6 +41,16 @@
             color: #1e3a5f;
             font-weight: 600;
         }
+        
+        .hero-slide {
+            transition: opacity 0.7s ease-in-out;
+        }
+        
+        .hero-dot.active {
+            background-color: white;
+            width: 28px;
+            border-radius: 9999px;
+        }
     </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans">
@@ -60,9 +59,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-marian-blue rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-cross text-white text-xl"></i>
-                    </div>
+                    <img src="images/logohomemaster.png" alt="Children of Mary Logo" class="h-10 w-auto">
                     <div>
                         <span class="font-bold text-2xl heading-serif marian-blue">Children of Mary</span>
                     </div>
@@ -89,8 +86,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-marian-blue text-white">
-        <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <header class="bg-marian-blue text-white relative overflow-hidden h-[620px] md:h-[680px] flex items-center">
+        <div class="max-w-6xl mx-auto px-6 relative z-30">
             <div class="max-w-3xl">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="h-px w-12 bg-white/50"></div>
@@ -116,6 +113,33 @@
                     </a>
                 </div>
             </div>
+        </div>
+        
+        <!-- Hero background carousel -->
+        <div id="hero-carousel" class="absolute inset-0 opacity-30">
+            <!-- Populated by JavaScript -->
+        </div>
+        
+        <!-- Carousel Controls -->
+        <div class="absolute inset-0 z-20 flex items-center justify-between px-4 md:px-8">
+            <button onclick="prevHeroSlide()" 
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 text-white transition backdrop-blur-sm">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <button onclick="nextHeroSlide()" 
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 text-white transition backdrop-blur-sm">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Dots -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+            <button onclick="goToHeroSlide(0)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(1)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(2)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(3)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(4)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
         </div>
     </header>
 
@@ -145,15 +169,20 @@
         </div>
     </div>
 
-    <!-- About Preview -->
-    <div class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <div class="max-w-2xl mx-auto">
-            <span class="text-sm uppercase tracking-widest text-marian-blue font-semibold">A Congregation for Youth</span>
-            <h2 class="section-header mt-4 mb-6">Consecrating young people to Our Blessed Mother</h2>
-            <p class="text-xl text-stone-600 leading-relaxed">
-                The Children of Mary is an organization for young people between the ages of 7 and 18 
-                who wish to consecrate themselves in a special way to Our Blessed Mother.
-            </p>
+    <!-- Group Photo Section -->
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <img src="images/hero-6.jpg" alt="Children of Mary group" class="rounded-3xl shadow-lg w-full">
+            </div>
+            <div>
+                <span class="text-sm font-semibold uppercase tracking-widest text-marian-blue">A Congregation for Youth</span>
+                <h2 class="section-header mt-4 mb-6">Consecrating young people to Our Blessed Mother</h2>
+                <p class="text-xl text-stone-600 leading-relaxed">
+                    The Children of Mary is an organization for young people between the ages of 7 and 18 
+                    who wish to consecrate themselves in a special way to Our Blessed Mother.
+                </p>
+            </div>
         </div>
     </div>
 
@@ -197,9 +226,7 @@
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center">
-                            <i class="fa-solid fa-cross text-white"></i>
-                        </div>
+                        <img src="images/logohomemaster.png" alt="Logo" class="h-9 w-auto brightness-0 invert">
                         <span class="font-bold text-xl heading-serif">Children of Mary</span>
                     </div>
                     <p class="max-w-sm text-white/70">
@@ -223,9 +250,95 @@
     </footer>
 
     <script>
-        // Tailwind script
-        function initializeTailwind() {
-            document.documentElement.style.setProperty('--accent', '#1e3a5f');
+        // Hero Carousel
+        const heroImages = [
+            'images/hero-1.JPG',
+            'images/hero-2.JPG',
+            'images/hero-3.JPG',
+            'images/hero-5.JPG',
+            'images/hero-6.jpg'
+        ];
+        
+        let currentSlide = 0;
+        let heroInterval = null;
+        
+        function initHeroCarousel() {
+            const container = document.getElementById('hero-carousel');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            heroImages.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = '';
+                img.className = `hero-slide absolute inset-0 w-full h-full object-cover ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
+                container.appendChild(img);
+            });
+            
+            updateHeroDots();
+            startHeroAutoSlide();
+        }
+        
+        function updateHeroSlides() {
+            const container = document.getElementById('hero-carousel');
+            const slides = container.querySelectorAll('.hero-slide');
+            
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+            
+            updateHeroDots();
+        }
+        
+        function updateHeroDots() {
+            const dots = document.querySelectorAll('.hero-dot');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active', 'bg-white');
+                    dot.classList.remove('bg-white/60');
+                } else {
+                    dot.classList.remove('active', 'bg-white');
+                    dot.classList.add('bg-white/60');
+                }
+            });
+        }
+        
+        function goToHeroSlide(index) {
+            currentSlide = index;
+            updateHeroSlides();
+            resetHeroAutoSlide();
+        }
+        
+        function nextHeroSlide() {
+            currentSlide = (currentSlide + 1) % heroImages.length;
+            updateHeroSlides();
+            resetHeroAutoSlide();
+        }
+        
+        function prevHeroSlide() {
+            currentSlide = (currentSlide - 1 + heroImages.length) % heroImages.length;
+            updateHeroSlides();
+            resetHeroAutoSlide();
+        }
+        
+        function startHeroAutoSlide() {
+            if (heroInterval) clearInterval(heroInterval);
+            heroInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % heroImages.length;
+                updateHeroSlides();
+            }, 5000);
+        }
+        
+        function resetHeroAutoSlide() {
+            if (heroInterval) clearInterval(heroInterval);
+            startHeroAutoSlide();
         }
         
         // Mobile menu
@@ -234,7 +347,10 @@
             if (nav) nav.classList.toggle('hidden');
         });
         
-        initializeTailwind();
+        // Initialize carousel on load
+        window.addEventListener('load', () => {
+            initHeroCarousel();
+        });
     </script>
 </body>
 </html>
