@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Children of Mary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --marian-blue: #1e3a5f;
+        }
+        
+        .marian-blue { color: #1e3a5f; }
+        .bg-marian-blue { background-color: #1e3a5f; }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #1e3a5f;
+            transform: translateY(-1px);
+        }
+        
+        .section-header {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        
+        .marian-border {
+            border-color: #1e3a5f;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-active {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-marian-blue rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-cross text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl heading-serif marian-blue">Children of Mary</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link nav-active">Home</a>
+                    <a href="history.html" class="nav-link">History</a>
+                    <a href="mission.html" class="nav-link">Mission</a>
+                    <a href="patrons.html" class="nav-link">Patrons</a>
+                    <a href="programs.html" class="nav-link">Programs</a>
+                    <a href="devotion.html" class="nav-link">Devotion</a>
+                    <a href="register.html" class="nav-link">Join Us</a>
+                    <a href="contact.html" class="nav-link">Get In Touch</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-marian-blue text-white">
+        <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-px w-12 bg-white/50"></div>
+                    <span class="uppercase tracking-[3px] text-sm font-medium text-white/70">Est. 2011 • Alexandria, LA</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold heading-serif leading-none tracking-tight mb-6">
+                    The Children<br>of Mary
+                </h1>
+                
+                <p class="text-2xl md:text-3xl text-white/90 font-light max-w-lg mb-10">
+                    Forming young hearts in extraordinary devotion to Our Blessed Mother.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="register.html" 
+                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-marian-blue font-semibold rounded-full hover:bg-stone-100 transition-colors text-lg">
+                        Join the Congregation
+                    </a>
+                    <a href="devotion.html" 
+                       class="inline-flex items-center justify-center px-8 py-4 border border-white/70 hover:bg-white/10 rounded-full font-medium text-lg transition-colors">
+                        Explore the Devotion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Links -->
+    <div class="max-w-6xl mx-auto px-6 -mt-8 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="history.html" class="card bg-white rounded-2xl p-6 border border-stone-200 flex flex-col">
+                <div class="text-marian-blue mb-3"><i class="fa-solid fa-book text-2xl"></i></div>
+                <div class="font-semibold text-lg">Our History</div>
+                <div class="text-sm text-stone-600 mt-1">Founded in 2011</div>
+            </a>
+            <a href="mission.html" class="card bg-white rounded-2xl p-6 border border-stone-200 flex flex-col">
+                <div class="text-marian-blue mb-3"><i class="fa-solid fa-bullseye text-2xl"></i></div>
+                <div class="font-semibold text-lg">Our Mission</div>
+                <div class="text-sm text-stone-600 mt-1">Devotion for the young</div>
+            </a>
+            <a href="patrons.html" class="card bg-white rounded-2xl p-6 border border-stone-200 flex flex-col">
+                <div class="text-marian-blue mb-3"><i class="fa-solid fa-user text-2xl"></i></div>
+                <div class="font-semibold text-lg">Our Patrons</div>
+                <div class="text-sm text-stone-600 mt-1">St. Philomena &amp; others</div>
+            </a>
+            <a href="register.html" class="card bg-white rounded-2xl p-6 border border-stone-200 flex flex-col">
+                <div class="text-marian-blue mb-3"><i class="fa-solid fa-user-plus text-2xl"></i></div>
+                <div class="font-semibold text-lg">Become a Member</div>
+                <div class="text-sm text-stone-600 mt-1">Ages 7–18</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- About Preview -->
+    <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-2xl mx-auto">
+            <span class="text-sm uppercase tracking-widest text-marian-blue font-semibold">A Congregation for Youth</span>
+            <h2 class="section-header mt-4 mb-6">Consecrating young people to Our Blessed Mother</h2>
+            <p class="text-xl text-stone-600 leading-relaxed">
+                The Children of Mary is an organization for young people between the ages of 7 and 18 
+                who wish to consecrate themselves in a special way to Our Blessed Mother.
+            </p>
+        </div>
+    </div>
+
+    <!-- Programs Teaser -->
+    <div class="bg-white border-y border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+                <div class="md:col-span-5">
+                    <span class="text-sm font-semibold uppercase tracking-widest text-marian-blue">The Program</span>
+                    <h3 class="section-header mt-3">The Twelve Stars</h3>
+                    <p class="mt-4 text-lg text-stone-600">
+                        Our flagship program introduces St. Philomena, the power of her intercession, 
+                        and the integrity of her example to the youth of the 21st century.
+                    </p>
+                    <a href="programs.html" class="mt-6 inline-flex items-center gap-2 text-marian-blue font-medium group">
+                        Learn more about the program
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-stone-50 p-5 rounded-2xl">
+                        <div class="font-semibold">Monthly Meetings</div>
+                        <div class="text-sm text-stone-600 mt-1">Formation &amp; prayer</div>
+                    </div>
+                    <div class="bg-stone-50 p-5 rounded-2xl">
+                        <div class="font-semibold">The Twelve Stars</div>
+                        <div class="text-sm text-stone-600 mt-1">Virtue-based program</div>
+                    </div>
+                    <div class="bg-stone-50 p-5 rounded-2xl">
+                        <div class="font-semibold">Consecration</div>
+                        <div class="text-sm text-stone-600 mt-1">Total dedication to Mary</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-marian-blue text-white/90">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-cross text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl heading-serif">Children of Mary</span>
+                    </div>
+                    <p class="max-w-sm text-white/70">
+                        Congregation of the Children of Mary<br>
+                        2211 E Texas Ave, Alexandria, LA 71301
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:items-end gap-2 text-sm">
+                    <a href="contact.html" class="hover:text-white transition">Contact Us</a>
+                    <a href="register.html" class="hover:text-white transition">Register a Child</a>
+                    <a href="devotion.html" class="hover:text-white transition">Daily Devotions</a>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-white/10 text-xs text-white/50 flex flex-col md:flex-row md:items-center gap-y-2 md:justify-between">
+                <div>© 2026 Congregation of the Children of Mary. All rights reserved.</div>
+                <div>Hosted on Netlify • Made with love for Our Lady</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#1e3a5f');
+        }
+        
+        // Mobile menu
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+            const nav = document.querySelector('nav .hidden.md\\:flex');
+            if (nav) nav.classList.toggle('hidden');
+        });
+        
+        initializeTailwind();
+    </script>
+</body>
+</html>

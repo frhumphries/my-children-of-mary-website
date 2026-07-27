@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us — The Children of Mary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        .heading-serif { font-family: 'Playfair Display', Georgia, serif; }
+        .marian-blue { color: #1e3a5f; }
+        .nav-link:hover { color: #1e3a5f; }
+    </style>
+</head>
+<body class="bg-stone-50">
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-marian-blue rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-cross text-white text-xl"></i>
+                    </div>
+                    <a href="index.html" class="font-bold text-2xl heading-serif marian-blue">Children of Mary</a>
+                </div>
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="history.html" class="nav-link">History</a>
+                    <a href="mission.html" class="nav-link">Mission</a>
+                    <a href="patrons.html" class="nav-link">Patrons</a>
+                    <a href="programs.html" class="nav-link">Programs</a>
+                    <a href="devotion.html" class="nav-link">Devotion</a>
+                    <a href="register.html" class="nav-link text-marian-blue font-semibold">Join Us</a>
+                    <a href="contact.html" class="nav-link">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6 py-16">
+        <div class="max-w-2xl">
+            <span class="text-sm uppercase tracking-[3px] text-marian-blue font-semibold">Become a Member</span>
+            <h1 class="text-5xl heading-serif mt-4 mb-4">Join the Children of Mary</h1>
+            <p class="text-xl text-stone-600">Fill out the form below to become a member of the Congregation of the Children of Mary.</p>
+        </div>
+
+        <!-- Netlify Form -->
+        <form name="register" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="mt-10 bg-white p-8 md:p-10 rounded-3xl border border-stone-200">
+            <input type="hidden" name="form-name" value="register">
+            <p class="hidden">
+                <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-1.5">Child's Full Name</label>
+                    <input type="text" name="child-name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1.5">Date of Birth</label>
+                    <input type="date" name="dob" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1.5">Parent/Guardian Name</label>
+                    <input type="text" name="parent-name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1.5">Email Address</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1.5">Phone Number</label>
+                    <input type="tel" name="phone" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1.5">City, State</label>
+                    <input type="text" name="location" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <label class="block text-sm font-medium mb-1.5">Why would you like your child to join the Children of Mary?</label>
+                <textarea name="reason" rows="4" class="w-full px-4 py-3 border border-stone-300 rounded-2xl focus:outline-none focus:border-marian-blue"></textarea>
+            </div>
+
+            <button type="submit" 
+                    class="mt-8 w-full md:w-auto px-10 py-4 bg-marian-blue text-white font-semibold rounded-full hover:bg-[#162c48] transition-colors">
+                Submit Registration
+            </button>
+            
+            <p class="text-xs text-stone-500 mt-6">We will contact you within a few days to confirm your registration and provide meeting details.</p>
+        </form>
+    </div>
+
+    <footer class="bg-marian-blue text-white/90 mt-16">
+        <div class="max-w-6xl mx-auto px-6 py-12 text-sm">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-4">
+                <div>© 2026 Congregation of the Children of Mary</div>
+                <div class="text-white/60">2211 E Texas Ave, Alexandria, LA 71301</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
