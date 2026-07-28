@@ -1,75 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the Twelve Stars formation program of the Children of Mary.">
     <title>Programs — The Children of Mary</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
-        .heading-serif { font-family: 'Playfair Display', Georgia, serif; }
-        .marian-blue { color: #1e3a5f; }
-        .nav-link:hover { color: #1e3a5f; }
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap");
+      .heading-serif {
+        font-family: "Playfair Display", Georgia, serif;
+      }
+      .marian-blue {
+        color: #1e3a5f;
+      }
+      .nav-link:hover {
+        color: #1e3a5f;
+      }
     </style>
-</head>
-<body class="bg-stone-50">
+  </head>
+  <body class="bg-stone-50">
     <nav class="bg-white border-b border-stone-200 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <img src="images/logohomemaster.png" alt="Children of Mary Logo" class="h-10 w-auto">
-                    <a href="index.html" class="font-bold text-2xl heading-serif marian-blue">Children of Mary</a>
-                </div>
-                <div class="site-nav-links hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="history.html" class="nav-link">History</a>
-                    <a href="mission.html" class="nav-link">Mission</a>
-                    <a href="patrons.html" class="nav-link">Patrons</a>
-                    <a href="programs.html" class="nav-link text-marian-blue font-semibold">Programs</a>
-                    <a href="devotion.html" class="nav-link">Devotion</a>
-                    <a href="register.html" class="nav-link">Join Us</a>
-                    <a href="contact.html" class="nav-link">Get In Touch</a>
-                </div>
-            </div>
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-3">
+            <img src="images/logohomemaster.png" width="290" height="391" alt="Children of Mary Logo" class="h-10 w-auto" />
+            <a href="index.html" class="font-bold text-2xl heading-serif marian-blue">Children of Mary</a>
+          </div>
+          <div class="site-nav-links hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="history.html" class="nav-link">History</a>
+            <a href="mission.html" class="nav-link">Mission</a>
+            <a href="patrons.html" class="nav-link">Patrons</a>
+            <a href="programs.html" class="nav-link text-marian-blue font-semibold">Programs</a>
+            <a href="devotion.html" class="nav-link">Devotion</a>
+            <a href="register.html" class="nav-link">Join Us</a>
+            <a href="contact.html" class="nav-link">Get In Touch</a>
+          </div>
         </div>
+      </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-6 py-16">
-        <div class="max-w-3xl">
-            <span class="text-sm uppercase tracking-[3px] text-marian-blue font-semibold">Formation Program</span>
-            <h1 class="text-5xl heading-serif mt-4 mb-8">The Twelve Stars</h1>
-            
-            <div class="prose prose-lg max-w-none text-stone-700">
-                <p>The program aims to introduce St. Philomena, the power of her intercession and the integrity of her example to the youth of the 21st century.</p>
-                
-                <div class="my-8">
-                    <img src="images/procession.JPG" alt="Children of Mary procession" class="rounded-2xl shadow w-full">
-                </div>
-                
-                <p>The work of the Children of Mary is organized around twelve virtues or "stars" that guide the spiritual formation of our members throughout the year.</p>
-                
-                <h3 class="text-2xl heading-serif mt-10">What Members Receive</h3>
-                <ul class="mt-4 space-y-2">
-                    <li>Monthly formation meetings</li>
-                    <li>Age-appropriate catechesis on Marian devotion</li>
-                    <li>Prayer resources and devotional materials</li>
-                    <li>Guidance toward total consecration to Jesus through Mary</li>
-                    <li>Community with other young people striving for holiness</li>
-                </ul>
-            </div>
+    <main class="max-w-5xl mx-auto px-6 py-16">
+      <div class="max-w-3xl">
+        <span class="text-sm uppercase tracking-[3px] text-marian-blue font-semibold">Formation Program</span>
+        <h1 class="text-5xl heading-serif mt-4 mb-6">The Crown of Twelve Stars</h1>
+        <p class="text-xl leading-relaxed text-stone-700">The Crown of Twelve Stars gives members a progressive path of spiritual growth in prayer, devotion, study, service, and virtue under the patronage of St. Philomena and the protection of the Blessed Mother.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-5 gap-8 items-start">
+        <img src="images/procession.JPG" width="1000" height="1000" loading="lazy" alt="Children of Mary procession" class="md:col-span-2 rounded-3xl shadow-md w-full" />
+        <div class="md:col-span-3 space-y-5 text-stone-700 leading-relaxed">
+          <h2 class="text-3xl heading-serif text-marian-blue">Children of Mary Circles</h2>
+          <p>Young people are encouraged to form circles in their schools and parishes. A circle has at least five members and meets regularly for formation, prayer, and mutual support.</p>
+          <p>Members pray one decade of the Rosary each day, invoke the aid of St. Philomena, and strive for total consecration to Jesus through Mary in the spirituality of St. Louis de Montfort.</p>
+          <p>The sign of membership is the Miraculous Medal worn on a broad blue ribbon. The congregation’s motto is <em>Monstra esse te Matrem</em> — “Show thyself a Mother.”</p>
+          <a href="register.html" class="inline-flex px-7 py-3 bg-marian-blue text-white rounded-full font-semibold">Enroll as a member</a>
         </div>
-    </div>
+      </div>
+
+      <section class="mt-16" aria-labelledby="stars-heading">
+        <div class="max-w-3xl">
+          <span class="text-sm uppercase tracking-[3px] text-marian-blue font-semibold">A Path of Formation</span>
+          <h2 id="stars-heading" class="text-4xl heading-serif mt-3">The Twelve Stars</h2>
+          <p class="mt-4 text-stone-600">Silver stars are awarded for completing each stage. Open a star below for an overview of its formation goals.</p>
+        </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-4">
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">First Star — Consecration &amp; the Rosary</summary><p class="mt-4 text-stone-700">Formally enroll, make the Act of Consecration after Confession and Holy Communion, study the assigned mystery of the Rosary, pray the Daily Decade, and encourage others to pray. This stage follows two months of active membership.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Second Star — St. Philomena</summary><p class="mt-4 text-stone-700">Study and share the life of St. Philomena, learn her chaplet, practice courage, loyalty, and purity of heart, and memorize the Acts of Faith, Hope, and Love.</p><p class="mt-3 text-sm text-stone-600">Her devotional days include January 10, May 25, and August 11.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Third Star — A Child of Mary</summary><p class="mt-4 text-stone-700">Renew the Act of Consecration daily; reflect on Mary’s purity, humility, obedience, and charity; choose a personal Marian motto; observe the month of May; and learn a Morning Offering.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Fourth Star — The Miraculous Medal</summary><p class="mt-4 text-stone-700">Study Our Lady’s apparitions to St. Catherine Labouré, share and distribute Miraculous Medals with permission, practice loyalty and amiability, and memorize the Memorare. This stage follows six months of active membership.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Fifth Star — The Sacred Heart</summary><p class="mt-4 text-stone-700">Learn about the Sacred Heart of Jesus and St. Margaret Mary, spend time in Eucharistic adoration, understand the symbols of the Sacred Heart, and practice prayer, sacrifice, fasting, and abstinence. This stage follows eight months.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Sixth Star — Our Lady of Fatima</summary><p class="mt-4 text-stone-700">Study Fatima and the response of the shepherd children, complete the Five First Saturdays, promote the Rosary and devotion to the Immaculate Heart, and understand regular Confession and the Easter duties. This stage follows ten months.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Seventh Star — The Little Way &amp; Vocation</summary><p class="mt-4 text-stone-700">Study St. Thérèse of Lisieux and her Little Way of humility and trust, learn about a religious community, and speak with a priest or religious about discerning one’s vocation. This stage follows one year.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Eighth Star — Growth in Holiness</summary><p class="mt-4 text-stone-700">Keep a private examination-of-conscience journal for two months, study a virtue important to personal growth, seek St. Joseph’s guidance, and deepen the desire for sainthood. This stage follows fourteen months.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Ninth Star — Sharing the Faith</summary><p class="mt-4 text-stone-700">Study Venerable Pauline Jaricot and the Living Rosary, take part in a concrete work of catechesis or mission, and reflect on Christian suffering and salvation. This stage follows sixteen months.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Tenth Star — The Holy Spirit</summary><p class="mt-4 text-stone-700">Learn the <em>Veni Creator Spiritus</em>, memorize the Gifts and Fruits of the Holy Spirit, and study the Sacrament of Confirmation. This stage follows eighteen months.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Eleventh Star — Modesty &amp; Purity</summary><p class="mt-4 text-stone-700">Practice modesty and self-control, seek St. Philomena’s intercession, wear or carry her blessed Cord, and complete the Youth for Purity pledge. This stage follows twenty months.</p></details>
+          <details class="bg-white border border-stone-200 rounded-2xl p-6"><summary class="font-semibold text-lg cursor-pointer text-marian-blue">Twelfth Star — True Devotion</summary><p class="mt-4 text-stone-700">Study St. Louis de Montfort’s <em>True Devotion to Mary</em>, grow in humility and perseverance, learn the Magnificat, and solemnly renew the Act of Consecration after Confession and Holy Communion. This stage follows twenty-two months.</p></details>
+        </div>
+      </section>
+
+      <section class="mt-16 bg-white border border-stone-200 rounded-3xl p-8 md:p-10">
+        <span class="text-sm uppercase tracking-[3px] text-marian-blue font-semibold">St. Philomena</span>
+        <h2 class="text-4xl heading-serif mt-3">Youth for Purity Program</h2>
+        <div class="mt-5 grid md:grid-cols-2 gap-8 text-stone-700 leading-relaxed">
+          <p>The program presents St. Philomena as a patroness and friend in the pursuit of purity of mind and body. Participants are encouraged to consecrate themselves to her, wear her Cord, and pray the Cord Prayer daily.</p>
+          <p>Participants may also make a Purity Pledge affirming the Church’s teaching on the sanctity of marriage and sexuality. The prayer of consecration and pledge certificate are available from the Office of the Director.</p>
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="devotion.html" class="inline-flex justify-center px-7 py-3 border border-marian-blue text-marian-blue rounded-full font-semibold">Explore the devotions</a>
+          <a href="contact.html" class="inline-flex justify-center px-7 py-3 bg-marian-blue text-white rounded-full font-semibold">Contact the Director</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="bg-marian-blue text-white/90 mt-16">
-        <div class="max-w-6xl mx-auto px-6 py-12 text-sm">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-4">
-                <div>© 2026 Congregation of the Children of Mary</div>
-                <div class="text-white/60">2211 E Texas Ave, Alexandria, LA 71301</div>
-            </div>
+      <div class="max-w-6xl mx-auto px-6 py-12 text-sm">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-4">
+          <div>© 2026 Congregation of the Children of Mary</div>
+          <div class="text-white/60">2211 E Texas Ave, Alexandria, LA 71301</div>
         </div>
+      </div>
     </footer>
     <script src="assets/site.js"></script>
-</body>
+  </body>
 </html>
