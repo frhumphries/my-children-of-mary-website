@@ -6,6 +6,7 @@
     <title>Join Us — The Children of Mary</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
         .heading-serif { font-family: 'Playfair Display', Georgia, serif; }
@@ -24,7 +25,7 @@
                     </div>
                     <a href="index.html" class="font-bold text-2xl heading-serif marian-blue">Children of Mary</a>
                 </div>
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <div class="site-nav-links hidden md:flex items-center gap-8 text-sm font-medium">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="history.html" class="nav-link">History</a>
                     <a href="mission.html" class="nav-link">Mission</a>
@@ -46,7 +47,7 @@
         </div>
 
         <!-- Netlify Form -->
-        <form name="register" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="mt-10 bg-white p-8 md:p-10 rounded-3xl border border-stone-200">
+        <form name="register" method="POST" action="success.html" data-netlify="true" netlify-honeypot="bot-field" class="mt-10 bg-white p-8 md:p-10 rounded-3xl border border-stone-200">
             <input type="hidden" name="form-name" value="register">
             <p class="hidden">
                 <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
@@ -54,34 +55,39 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label class="block text-sm font-medium mb-1.5">Child's Full Name</label>
-                    <input type="text" name="child-name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                    <label for="child-name" class="block text-sm font-medium mb-1.5">Child's Full Name</label>
+                    <input id="child-name" type="text" name="child-name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:border-marian-blue">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1.5">Date of Birth</label>
-                    <input type="date" name="dob" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                    <label for="dob" class="block text-sm font-medium mb-1.5">Date of Birth</label>
+                    <input id="dob" type="date" name="dob" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:border-marian-blue">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1.5">Parent/Guardian Name</label>
-                    <input type="text" name="parent-name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                    <label for="parent-name" class="block text-sm font-medium mb-1.5">Parent/Guardian Name</label>
+                    <input id="parent-name" type="text" name="parent-name" autocomplete="name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:border-marian-blue">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1.5">Email Address</label>
-                    <input type="email" name="email" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                    <label for="register-email" class="block text-sm font-medium mb-1.5">Email Address</label>
+                    <input id="register-email" type="email" name="email" autocomplete="email" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:border-marian-blue">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1.5">Phone Number</label>
-                    <input type="tel" name="phone" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                    <label for="phone" class="block text-sm font-medium mb-1.5">Phone Number</label>
+                    <input id="phone" type="tel" name="phone" autocomplete="tel" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:border-marian-blue">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1.5">City, State</label>
-                    <input type="text" name="location" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-marian-blue">
+                    <label for="location" class="block text-sm font-medium mb-1.5">City, State</label>
+                    <input id="location" type="text" name="location" autocomplete="address-level2" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:border-marian-blue">
                 </div>
             </div>
 
             <div class="mt-6">
-                <label class="block text-sm font-medium mb-1.5">Why would you like your child to join the Children of Mary?</label>
-                <textarea name="reason" rows="4" class="w-full px-4 py-3 border border-stone-300 rounded-2xl focus:outline-none focus:border-marian-blue"></textarea>
+                <label for="reason" class="block text-sm font-medium mb-1.5">Why would you like your child to join the Children of Mary?</label>
+                <textarea id="reason" name="reason" rows="4" class="w-full px-4 py-3 border border-stone-300 rounded-2xl focus:border-marian-blue"></textarea>
+            </div>
+
+            <div class="mt-6 flex items-start gap-3">
+                <input id="guardian-consent" type="checkbox" name="guardian-consent" required class="mt-1 h-4 w-4">
+                <label for="guardian-consent" class="text-sm text-stone-700">I am the child’s parent or legal guardian and consent to the use of this information to administer membership. See our <a href="privacy.html" class="text-marian-blue underline">privacy notice</a>.</label>
             </div>
 
             <button type="submit" 
@@ -101,5 +107,6 @@
             </div>
         </div>
     </footer>
+    <script src="assets/site.js"></script>
 </body>
 </html>

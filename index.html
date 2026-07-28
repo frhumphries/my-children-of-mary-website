@@ -6,6 +6,7 @@
     <title>The Children of Mary</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
         
@@ -64,8 +65,8 @@
                         <span class="font-bold text-2xl heading-serif marian-blue">Children of Mary</span>
                     </div>
                 </div>
-                
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+                <div class="site-nav-links hidden md:flex items-center gap-8 text-sm font-medium">
                     <a href="index.html" class="nav-link nav-active">Home</a>
                     <a href="history.html" class="nav-link">History</a>
                     <a href="mission.html" class="nav-link">Mission</a>
@@ -122,12 +123,12 @@
         
         <!-- Carousel Controls -->
         <div class="absolute inset-0 z-20 flex items-center justify-between px-4 md:px-8">
-            <button onclick="prevHeroSlide()" 
+            <button onclick="prevHeroSlide()" aria-label="Previous image"
                     class="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 text-white transition backdrop-blur-sm">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
             
-            <button onclick="nextHeroSlide()" 
+            <button onclick="nextHeroSlide()" aria-label="Next image"
                     class="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 text-white transition backdrop-blur-sm">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
@@ -135,11 +136,11 @@
         
         <!-- Dots -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2">
-            <button onclick="goToHeroSlide(0)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
-            <button onclick="goToHeroSlide(1)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
-            <button onclick="goToHeroSlide(2)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
-            <button onclick="goToHeroSlide(3)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
-            <button onclick="goToHeroSlide(4)" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(0)" aria-label="Show carousel image " class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(1)" aria-label="Show carousel image " class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(2)" aria-label="Show carousel image " class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(3)" aria-label="Show carousel image " class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
+            <button onclick="goToHeroSlide(4)" aria-label="Show carousel image " class="hero-dot w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition"></button>
         </div>
     </header>
 
@@ -340,17 +341,12 @@
             if (heroInterval) clearInterval(heroInterval);
             startHeroAutoSlide();
         }
-        
-        // Mobile menu
-        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-            const nav = document.querySelector('nav .hidden.md\\:flex');
-            if (nav) nav.classList.toggle('hidden');
-        });
-        
+
         // Initialize carousel on load
         window.addEventListener('load', () => {
             initHeroCarousel();
         });
     </script>
+    <script src="assets/site.js"></script>
 </body>
 </html>
