@@ -37,7 +37,7 @@ Just open any `.html` file in a browser. No build step required.
 For a better experience you can use a simple local server:
 
 ```bash
-npx serve .
+pnpm dlx serve .
 ```
 
 ## Forms

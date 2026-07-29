@@ -1,6 +1,7 @@
 {
   "name": "children-of-mary-site",
   "private": true,
+  "packageManager": "pnpm@11.15.1",
   "scripts": {
     "build": "tailwindcss -i ./assets/tailwind-input.css -o ./assets/tailwind.css --minify"
   },
