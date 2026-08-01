@@ -2,6 +2,13 @@
 
 A clean, modern static recreation of https://www.mychildrenofmary.com/ ready to host on Netlify.
 
+## Repository Authority
+
+This is a collaborative project. Its dedicated GitHub repository is the
+writable source of truth for code, issues, pull requests, and deployment.
+Agents must work GitHub-first. Forgejo may hold a one-way mirror for local
+resilience and discovery, but it must not become a second writable authority.
+
 ## Features
 - Fully static multi-page site (no backend required)
 - Beautiful, responsive design with Tailwind CSS (Play CDN)
